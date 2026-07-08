@@ -244,9 +244,582 @@
     padding-right: 8px;
   }
 
+  /* ---- Zaproszenia (Запрошення) page ---- */
+
+  .page { display: none; }
+  .page.visible { display: block; }
+
+  .search-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .search-card-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .search-field label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+
+  .search-input-wrap {
+    position: relative;
+    width: 460px;
+    max-width: 100%;
+  }
+
+  .search-input-wrap svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa1ac;
+  }
+
+  .search-input-wrap input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #374151;
+    background: #fff;
+  }
+
+  .search-input-wrap input::placeholder {
+    color: #9aa1ac;
+  }
+
+  .search-input-wrap input:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(47, 110, 224, 0.12);
+  }
+
+  .table-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .table-card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 20px 4px;
+  }
+
+  table.invites {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table.invites th {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    padding: 0 12px 14px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  table.invites th.actions-col {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9aa1ac;
+    letter-spacing: 0.03em;
+  }
+
+  table.invites td {
+    padding: 18px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 15px;
+    color: #111827;
+    vertical-align: middle;
+  }
+
+  table.invites tr:last-child td {
+    border-bottom: none;
+  }
+
+  .chip {
+    display: inline-block;
+    background: #f1f2f5;
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+  }
+
+  .btn-tag {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+
+  .btn-tag.blue { background: var(--blue); color: #fff; }
+  .btn-tag.blue:hover { background: var(--blue-hover); }
+
+  .btn-tag.teal { background: #1fa363; color: #fff; }
+  .btn-tag.teal:hover { background: #188a53; }
+
+  .row-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-tag.red { background: #e04b4b; color: #fff; }
+  .btn-tag.red:hover { background: #c93f3f; }
+
+  .btn-tag.green { background: #1fa363; color: #fff; }
+  .btn-tag.green:hover { background: #188a53; }
+
+  .btn-icon-more {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    background: #f1f2f5;
+    color: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .btn-icon-more:hover { background: #e6e8ec; }
+
+  .previsits-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+  }
+
+  .previsits-table th {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    padding: 0 16px 16px 16px;
+  }
+
+  .previsits-table td {
+    background: #fff;
+    padding: 20px 16px;
+    font-size: 15px;
+    color: #111827;
+    border-bottom: 1px solid var(--bg);
+  }
+
+  .previsits-table tr td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+  .previsits-table tr td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+  .previsits-table tbody tr { box-shadow: 0 0 0 1px var(--border); }
+  .previsits-table tbody tr td { box-shadow: none; }
+  .previsits-table tbody tr + tr { margin-top: 8px; }
+
+  .btn-summary {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--blue);
+    cursor: pointer;
+  }
+
+  .btn-summary:hover { background: var(--blue-hover); }
+  .btn-summary.disabled {
+    background: #7c8592;
+    cursor: default;
+  }
+  .btn-summary.disabled:hover { background: #7c8592; }
+
+  .btn-journal {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--blue);
+    cursor: pointer;
+  }
+
+  .btn-journal:hover { background: var(--blue-hover); }
+
+  .btn-delete {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #e5484d;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .btn-delete:hover { background: #cf3f44; }
+
+  .previsits-wrap {
+    margin-top: 32px;
+  }
+
+  .btn-invite-simple {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btn-invite-simple:hover { background: var(--blue-hover); }
+
+  /* ---- Rodzaje wizyt (Типи візитів) page ---- */
+
+  .info-banner {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 28px;
+    margin-bottom: 32px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .visit-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+    gap: 24px;
+  }
+
+  .visit-type-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(22, 41, 77, 0.06);
+  }
+
+  .visit-type-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.3;
+  }
+
+  .visit-type-card p {
+    margin: 0 0 28px 0;
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  .visit-type-actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-edit {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-edit:hover { background: var(--blue-hover); }
+
+  .btn-remove {
+    background: #e5484d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-remove:hover { background: #cf3f44; }
+
+  .visit-type-card.add-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    cursor: pointer;
+    color: #6b7280;
+    min-height: 200px;
+    border: none;
+    text-align: left;
+  }
+
+  .visit-type-card.add-new:hover {
+    box-shadow: 0 4px 14px rgba(22, 41, 77, 0.1);
+  }
+
+  .visit-type-card.add-new .plus {
+    font-size: 26px;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1;
+  }
+
+  .visit-type-card.add-new span.label {
+    font-size: 19px;
+    font-weight: 500;
+    color: #6b7280;
+  }
+
+  .bottom-bar-empty {
+    background: #fff;
+    border-radius: 14px;
+    height: 56px;
+    margin-top: 32px;
+  }
+
+  /* ---- Ustawienia (Налаштування) page ---- */
+
+  .settings-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+
+  .settings-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 28px 0;
+  }
+
+  .field-label {
+    display: block;
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+
+  .select-wrap {
+    position: relative;
+    max-width: 900px;
+  }
+
+  .select-wrap select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 13px 40px 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #111827;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .select-wrap select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(47, 110, 224, 0.12);
+  }
+
+  .select-wrap svg.chev-select {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b7280;
+  }
+
+  .field-block {
+    margin-bottom: 28px;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--blue);
+    cursor: pointer;
+  }
+
+  .checkbox-row span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .field-help {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+  }
+
+  .add-item-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .add-item-row input {
+    flex: 1;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #374151;
+  }
+
+  .add-item-row input::placeholder { color: #9aa1ac; }
+
+  .add-item-row input:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(47, 110, 224, 0.12);
+  }
+
+  .add-item-row .btn-expand {
+    width: 48px;
+    background: var(--blue);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .add-item-row .btn-expand:hover { background: var(--blue-hover); }
+
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #f1f2f5;
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+
+  .item-row .item-text {
+    font-size: 15px;
+    color: #1f2937;
+    line-height: 1.5;
+  }
+
+  .item-row .item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #9aa1ac;
+  }
+
+  .item-row .item-controls button {
+    background: none;
+    border: none;
+    color: #9aa1ac;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+
+  .item-row .item-controls button:hover { color: #4b5563; }
+
+  .settings-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .btn-reset {
+    background: #e5726b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .btn-reset:hover { background: #d4645d; }
+
+  .btn-save {
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-save:hover { background: #0f1c37; }
+
+  .sms-heading {
+    font-size: 19px;
+    font-weight: 700;
+    color: #111827;
+    margin: 8px 0 20px 0;
+  }
+
   @media (max-width: 900px) {
     nav.links { display: none; }
     .actions-grid { grid-template-columns: 1fr; }
+    .search-card-row { flex-direction: column; align-items: stretch; }
+    table.invites { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
 </head>
@@ -263,11 +836,11 @@
         </svg>
       </div>
       <nav class="links">
-        <a href="#" class="active">Панель</a>
-        <a href="#">Запрошення</a>
-        <a href="#">Попередні візити</a>
-        <a href="#">Типи візитів</a>
-        <a href="#">Налаштування</a>
+        <a href="#" class="active" data-page="panel">Панель</a>
+        <a href="#" data-page="zaproszenia">Запрошення</a>
+        <a href="#" data-page="wizyty">Попередні візити</a>
+        <a href="#" data-page="rodzaje">Типи візитів</a>
+        <a href="#" data-page="ustawienia">Налаштування</a>
       </nav>
     </div>
     <div class="nav-right">
@@ -291,6 +864,7 @@
   </header>
 
   <main>
+    <section id="page-panel" class="page visible">
     <h1 class="page-title">Панель</h1>
 
     <div class="toolbar-card">
@@ -373,9 +947,472 @@
 
       </div>
     </div>
+    </section>
+
+    <section id="page-zaproszenia" class="page">
+      <h1 class="page-title">Запрошення</h1>
+
+      <div class="search-card">
+        <div class="search-card-row">
+          <div class="search-field">
+            <label for="search-invites">Пошук запрошень</label>
+            <div class="search-input-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input id="search-invites" type="text" placeholder="Шукати за іменем пацієнта, токеном, e-mail...">
+            </div>
+          </div>
+          <div class="btn-invite">
+            <button class="main">Запросити</button>
+            <button class="chev">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <h2>Ось ваші запрошення</h2>
+        <table class="invites">
+          <thead>
+            <tr>
+              <th>КОД</th>
+              <th>Створено</th>
+              <th>Мова</th>
+              <th>Пацієнт</th>
+              <th>Доставка</th>
+              <th>Використання</th>
+              <th class="actions-col">ДІЇ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5819CB8C</td>
+              <td>01/07/2026 23:26:54</td>
+              <td>Польська</td>
+              <td></td>
+              <td><span class="chip">Посилання</span></td>
+              <td><button class="btn-tag blue">підсумок</button></td>
+              <td>
+                <div class="row-actions">
+                  <button class="btn-tag red">Видалити</button>
+                  <button class="btn-tag green">Поділитися</button>
+                  <button class="btn-icon-more">⋮</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>F791B185</td>
+              <td>27/06/2026 21:05:37</td>
+              <td>Українська</td>
+              <td>Антон</td>
+              <td><span class="chip">Посилання</span></td>
+              <td><button class="btn-tag teal">переглянути чат</button></td>
+              <td>
+                <div class="row-actions">
+                  <button class="btn-tag red">Видалити</button>
+                  <button class="btn-tag green">Поділитися</button>
+                  <button class="btn-icon-more">⋮</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>04F615BC</td>
+              <td>27/06/2026 20:50:15</td>
+              <td>Польська</td>
+              <td>Anton</td>
+              <td><span class="chip">Посилання</span></td>
+              <td><button class="btn-tag blue">підсумок</button></td>
+              <td>
+                <div class="row-actions">
+                  <button class="btn-tag red">Видалити</button>
+                  <button class="btn-tag green">Поділитися</button>
+                  <button class="btn-icon-more">⋮</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="page-wizyty" class="page">
+      <h1 class="page-title">Попередні візити</h1>
+
+      <div class="search-card">
+        <div class="search-card-row">
+          <div class="search-field">
+            <label for="search-previsits">Пошук попередніх візитів</label>
+            <div class="search-input-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input id="search-previsits" type="text" placeholder="Шукати за пацієнтом або назвою запрошення...">
+            </div>
+          </div>
+          <button class="btn-invite-simple">Запросити</button>
+        </div>
+      </div>
+
+      <div class="previsits-wrap">
+        <table class="previsits-table">
+          <thead>
+            <tr>
+              <th>Пацієнт</th>
+              <th>Створено</th>
+              <th>Підсумок</th>
+              <th>Журнал</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Anton_2026-07-01_20:26</td>
+              <td>2026-07-01 20:27:23</td>
+              <td><button class="btn-summary">Підсумок</button></td>
+              <td><button class="btn-journal">Журнал</button></td>
+              <td>
+                <button class="btn-delete" aria-label="Видалити">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                    <path d="M10 11v6"/>
+                    <path d="M14 11v6"/>
+                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Антон_2026-06-27_18:05</td>
+              <td>2026-06-27 18:05:45</td>
+              <td><button class="btn-summary disabled">Підсумок</button></td>
+              <td><button class="btn-journal">Журнал</button></td>
+              <td>
+                <button class="btn-delete" aria-label="Видалити">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                    <path d="M10 11v6"/>
+                    <path d="M14 11v6"/>
+                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Anton_2026-06-27_17:51</td>
+              <td>2026-06-27 17:51:13</td>
+              <td><button class="btn-summary">Підсумок</button></td>
+              <td><button class="btn-journal">Журнал</button></td>
+              <td>
+                <button class="btn-delete" aria-label="Видалити">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                    <path d="M10 11v6"/>
+                    <path d="M14 11v6"/>
+                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="page-rodzaje" class="page">
+      <h1 class="page-title">Типи візитів</h1>
+
+      <div class="info-banner">Тут ви можете визначити різні типи візитів</div>
+
+      <div class="visit-types-grid">
+        <div class="visit-type-card">
+          <h3>Стандартна візит:спеціалізація</h3>
+          <p>Стандартний візит для кардіолога</p>
+          <div class="visit-type-actions">
+            <button class="btn-edit">Редагувати</button>
+            <button class="btn-remove">Видалити</button>
+          </div>
+        </div>
+
+        <button class="visit-type-card add-new">
+          <span class="plus">+</span>
+          <span class="label">Додати новий тип візиту</span>
+        </button>
+      </div>
+
+      <div class="bottom-bar-empty"></div>
+    </section>
+
+
+    <section id="page-ustawienia" class="page">
+      <h1 class="page-title">Налаштування</h1>
+
+      <div class="settings-card">
+        <h2>Тут ви можете змінити свої налаштування</h2>
+
+        <div class="field-block">
+          <label class="field-label">Ваша спеціалізація</label>
+          <div class="select-wrap">
+            <select>
+              <option>Кардіолог</option>
+              <option>Терапевт</option>
+              <option>Педіатр</option>
+              <option>Невролог</option>
+            </select>
+            <svg class="chev-select" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" checked>
+          <span>Змінити необхідну інформацію</span>
+        </label>
+
+        <p class="field-help">Перелічіть пунктами інформацію, яку ви хотіли б, щоб надав пацієнт. Можете писати будь-якою мовою, однак англійська дасть найкращі результати. Мова розмови на це не впливатиме</p>
+
+        <div class="add-item-row">
+          <input type="text" placeholder="Введіть, щоб знайти, або вкажіть свій текст">
+          <button class="btn-expand" aria-label="Розгорнути"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+
+        <div class="item-list">
+            <div class="item-row">
+              <span class="item-text">вік пацієнта</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">повід візиту (це перший візит? якщо так, яка причина. якщо не перший — коли був останній)</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">симптоми (особливо біль у грудях, нерегулярне серцебиття, задишка)</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">поточні супутні захворювання (і з якого часу, якщо пацієнт знає)</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">поточні ліки (постарайтеся запитати про дозування та частоту, якщо пацієнт знає)</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">вага і зріст</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">сімейний анамнез (якщо хтось із членів родини мав інфаркт, інсульт, серцеву недостатність, аритмію, раптову смерть, особливо в молодому віці)</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">фактори ризику, такі як</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">куріння (скільки цигарок і з якого часу?</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">вживання алкоголю</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">дієта</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">низька фізична активність</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" checked>
+          <span>Змінити підсумкову інформацію</span>
+        </label>
+
+        <p class="field-help">Вкажіть, яку інформацію ви вимагаєте в підсумку.</p>
+
+        <div class="add-item-row">
+          <input type="text" placeholder="Введіть, щоб знайти, або вкажіть свій текст">
+          <button class="btn-expand" aria-label="Розгорнути"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+
+        <div class="item-list">
+            <div class="item-row">
+              <span class="item-text">Причина візиту</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">Симптоми</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">Супутні захворювання</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">Ліки</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">Фактори ризику</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+            <div class="item-row">
+              <span class="item-text">Інші категорії, які ви вважаєте важливими, але вони мають відповідати медичній логіці. Якщо вказано вагу і зріст — розрахуйте ІМТ. Якщо важливої інформації немає — пропустіть цей розділ.</span>
+              <div class="item-controls">
+                <button aria-label="Вгору"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+                <button aria-label="Вниз"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button aria-label="Видалити"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+              </div>
+            </div>
+        </div>
+
+        <p class="field-help">Можете використовувати будь-яку мову, однак англійська дасть найкращі результати. Розмова (з точки зору пацієнта) на це не впливатиме</p>
+
+        <label class="checkbox-row">
+          <input type="checkbox" checked>
+          <span>Встановити мову підсумку за замовчуванням</span>
+        </label>
+
+        <div class="field-block">
+          <div class="select-wrap">
+            <select>
+              <option>Польська</option>
+              <option>Українська</option>
+              <option>Англійська</option>
+            </select>
+            <svg class="chev-select" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox">
+          <span>Вкажіть власну реалізацію API OpenAI</span>
+        </label>
+
+        <h3 class="sms-heading">Конфігурація SMS-шлюзу</h3>
+        <div class="field-block">
+          <label class="field-label">Постачальник SMS за замовчуванням</label>
+          <div class="select-wrap">
+            <select>
+              <option value="">— Оберіть —</option>
+              <option>Twilio</option>
+              <option>Vonage</option>
+            </select>
+            <svg class="chev-select" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn-reset">СКИНУТИ НАЛАШТУВАННЯ</button>
+          <button class="btn-save">Зберегти</button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h2 style="margin-bottom:8px;">Налаштування для розробників</h2>
+        <p class="field-help" style="margin-bottom:20px;">Увімкніть або вимкніть режим розробника (це надасть вам доступ до API)</p>
+        <label class="checkbox-row" style="margin-bottom:0;">
+          <input type="checkbox">
+          <span style="font-weight:500; font-size:15px;">Увімкнути режим розробника</span>
+        </label>
+      </div>
+    </section>
 
     <footer class="version">Previsit.ai v1.6.5</footer>
   </main>
+
+  <script>
+    document.querySelectorAll('nav.links a[data-page]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('nav.links a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+
+        document.querySelectorAll('main .page').forEach(p => p.classList.remove('visible'));
+        const target = document.getElementById('page-' + link.dataset.page);
+        if (target) target.classList.add('visible');
+      });
+    });
+  </script>
 
 </body>
 </html>
